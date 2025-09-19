@@ -241,7 +241,7 @@ export default function Page() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-[94.2vh] md:h-screen overflow-hidden"
+      className="relative w-full h-screen md:h-screen overflow-hidden"
     >
       {/* Background Image */}
       <Image

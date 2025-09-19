@@ -7,8 +7,63 @@ import { ImInstagram } from "react-icons/im";
 import { MdMail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { LiaLinkedin } from "react-icons/lia";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
 
 export default function Page() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      ".gsap_aboutMe",
+      { backgroundColor: "black" },
+      {
+        backgroundColor: "#B42613",
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".gsap_aboutMe",
+          start: "top 50%",
+          end: "bottom 35%",
+          toggleActions: "play reverse play reverse",
+          // markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".gsap_captionWording",
+      { backgroundColor: "black" },
+      {
+        backgroundColor: "#11337D",
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".gsap_captionWording",
+          start: "top 60%",
+          end: "bottom 40%",
+          toggleActions: "play reverse play reverse",
+          // markers: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".gsap_endMainContainer",
+      { backgroundColor: "black" },
+      {
+        backgroundColor: "#FFC400",
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".gsap_endMainContainer",
+          start: "top 60%",
+          end: "bottom 25%",
+          toggleActions: "play reverse play reverse",
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     // global container
     <div className="bg-black w-full h-screen">
@@ -40,7 +95,7 @@ export default function Page() {
         {/* About Me Description */}
         <div className="text-primary py-10 flex justify-center items-center bg-black">
           <Wrapper>
-            <div className="flex flex-col text-center gap-10 border border-l-0 border-b-0 rounded-3xl py-20 px-5">
+            <div className="gsap_aboutMe flex flex-col text-center gap-10 border border-l-0 border-b-0 border-t-4 border-r-2 rounded-3xl py-20 px-5">
               <h1 className="text-5xl font-anta">About Me</h1>
               <p className="text-sm font-antic leading-6">
                 Description about me and what I like to do Description about me
@@ -54,7 +109,7 @@ export default function Page() {
           </Wrapper>
         </div>
         {/* Caption Wording */}
-        <div className="text-primary py-32 flex justify-center items-center bg-black">
+        <div className="gsap_captionWording text-primary py-32 flex justify-center items-center bg-black">
           <Wrapper>
             <h2 className="text-4xl font-anton text-center leading-[55px]">
               Out of the Ordinary and Creative side of Web Development
@@ -62,7 +117,7 @@ export default function Page() {
           </Wrapper>
         </div>
         {/* End Main Container */}
-        <div className="bg-black py-10">
+        <div className="gsap_endMainContainer bg-black py-10">
           <Wrapper>
             {/* View my CV Section */}
             <div className="flex justify-center items-center flex-col gap-14 w-full h-full py-10">
@@ -87,26 +142,26 @@ export default function Page() {
                 <div className="w-full">
                   <form action="" className="flex flex-col w-full gap-5">
                     <input
-                      className="bg-black border-b py-3 pl-4"
+                      className="bg-transparent border-b py-3 pl-4"
                       type="text"
                       placeholder="Name"
                     />
                     <input
-                      className="bg-black border-b py-3 pl-4"
+                      className="bg-transparent border-b py-3 pl-4"
                       type="email"
                       name=""
                       id=""
                       placeholder="Email"
                     />
                     <input
-                      className="bg-black border-b pb-20 pt-5 pl-4"
+                      className="bg-transparent border-b pb-20 pt-5 pl-4"
                       type="text"
                       placeholder="How can I help you?"
                     />
                     <input
                       type="submit"
                       value="Send"
-                      className="bg-black px-8 self-end py-3 rounded-3xl text-white border"
+                      className="bg-transparent px-8 self-end py-3 rounded-3xl text-white border"
                     />
                   </form>
                 </div>

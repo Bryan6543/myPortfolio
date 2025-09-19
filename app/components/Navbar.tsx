@@ -5,11 +5,12 @@ import Wrapper from "./subComponents/Wrapper";
 import { usePathname } from "next/navigation";
 import Logo from "./subComponents/Logo";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import FadeInSection from "../utils/FadeInSection";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -20,11 +21,13 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
   };
 
-  const pathname = usePathname();
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const navList = [
-    { label: "Projects", linkTo: "/sd" },
-    { label: "Work Experience", linkTo: " " },
+    { label: "Projects", linkTo: "" },
+    // { label: "Work Experience", linkTo: " " },
     { label: "About Me", linkTo: "/aboutUs" },
     { label: "Download CV", linkTo: " " },
   ];
@@ -76,7 +79,7 @@ export default function Navbar() {
             {/* Mobile Menu Overlay */}
             <div
               onClick={closeMobileMenu}
-              className={`fixed inset-0 h-screen w-screen bg-black/60 backdrop-blur-sm lg:hidden transition-all duration-300 ${
+              className={`fixed inset-0 h-screen w-screen bg-black/50 backdrop-blur-sm lg:hidden transition-all duration-300 ${
                 isMobileMenuOpen
                   ? "opacity-100 pointer-events-auto"
                   : "opacity-0 pointer-events-none"
@@ -84,7 +87,7 @@ export default function Navbar() {
             ></div>
             {/* Mobile Menu */}
             <div
-              className={`fixed bg-black top-0 left-0 h-full w-80 max-w-88 z-40 lg:hidden transform duration-300 ease-in-out ${
+              className={`fixed bg-black inset-0 top-0 left-0 h-screen w-80 max-w-88 z-40 lg:hidden transform duration-300 ease-in-out ${
                 isMobileMenuOpen ? "translate-x-0 open" : "-translate-x-full"
               } shadow-2xl p-5`}
             >
