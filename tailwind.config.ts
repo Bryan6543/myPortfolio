@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         anta: ["var(--font-anta)", "sans-serif"],
         antic: ["var(--font-antic)", "sans-serif"],
+        anton: ["var(--font-anton)", "sans-serif"],
       },
       colors: {
         // white
@@ -25,4 +26,3 @@ const config: Config = {
 };
 
 export default config;
-
