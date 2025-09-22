@@ -57,7 +57,7 @@ export default function Navbar() {
                     ${pathname === "/aboutUs" ? "hover:text-white" : ""}
                     ${
                       index.label === "Download CV"
-                        ? "text-[#788cfc] hover:text-[#B42613]"
+                        ? "text-[#ff4a4a] font-black"
                         : ""
                     }
                     `}
