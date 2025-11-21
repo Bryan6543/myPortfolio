@@ -5,5 +5,5 @@ type WrapperProps = {
 };
 
 export default function Wrapper({ children }: WrapperProps) {
-  return <div className="pl-[25px] pr-[25px] pt-[25px]">{children}</div>;
+  return <div className="pl-[25px] pr-[25px] pt-[25px] w-full">{children}</div>;
 }
