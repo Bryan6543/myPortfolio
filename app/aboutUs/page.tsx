@@ -103,17 +103,17 @@ export default function Page() {
             <div className="gsap_aboutMe flex flex-col text-center md:text-start md:px-20 gap-10 border border-l-0 border-b-0 border-t-4 border-r-2 rounded-3xl py-20 lg:py-32 px-5">
               <h1 className="text-5xl lg:text-6xl font-anta">About Me</h1>
               <p className="text-sm lg:text-base font-antic leading-6 lg:leading-7">
-                I'm someone who's always been drawn to creativity,
+                I am someone who's always been drawn to creativity,
                 problem-solving, and turning ideas into reality. What started as
                 curiosity has grown into a passion for building and designing
                 digital experiences that are both functional and meaningful. I
                 enjoy the process of taking an idea from scratch, shaping it
                 step by step, and refining it until it creates real impact.
-                Whether it's web development, design, or improving systems, I
+                Whether it is web development, design, or improving systems, I
                 approach each project as a chance to learn, grow, and push
                 boundaries. For me, technology is most powerful when it connects
                 with people—when it tells a story, sparks emotion, or makes life
-                easier. That's the mindset I bring to my work, and it's what
+                easier. That is the mindset I bring to my work, and it's what
                 continues to inspire me to create, explore, and evolve every
                 day.
               </p>
@@ -142,9 +142,7 @@ export default function Page() {
             {/* Contact Section */}
             <div className="pt-28 flex flex-col justify-center items-center py-10">
               <div className="flex flex-col gap-10 items-center">
-                <h1 className="text-center font-anton  text-5xl ">
-                  Contact
-                </h1>
+                <h1 className="text-center font-anton  text-5xl ">Contact</h1>
                 <p className="text-center font-antic w-[80%] ">
                   If you want to know anything more out of curiosity. I invite
                   you to contact me
