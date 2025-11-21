@@ -1,9 +1,9 @@
 "use client";
 
 import { IoMenu } from "react-icons/io5";
-import Wrapper from "./subComponents/Wrapper";
+import Wrapper from "../subComponents/Wrapper";
 import { usePathname, useRouter } from "next/navigation";
-import Logo from "./subComponents/Logo";
+import Logo from "../subComponents/Logo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";

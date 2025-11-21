@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Wrapper from "../components/subComponents/Wrapper";
+import Wrapper from "../subComponents/Wrapper";
 import Background from "../components/Background";
 
 const projectList = [

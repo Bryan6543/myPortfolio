@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Wrapper from "../components/subComponents/Wrapper";
-import ButtonV1 from "../components/subComponents/ButtonV1";
+import Wrapper from "../subComponents/Wrapper";
+import ButtonV1 from "../subComponents/ButtonV1";
 import { ImInstagram } from "react-icons/im";
 import { MdMail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";

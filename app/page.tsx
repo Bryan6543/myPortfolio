@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import ButtonV1 from "./components/subComponents/ButtonV1";
+import ButtonV1 from "./subComponents/ButtonV1";
 import Image from "next/image";
-import Wrapper from "./components/subComponents/Wrapper";
+import Wrapper from "./subComponents/Wrapper";
 
 export default function Page() {
   const backgroundRef = useRef<HTMLImageElement>(null);
